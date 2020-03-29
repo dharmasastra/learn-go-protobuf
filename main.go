@@ -61,7 +61,8 @@ func main()  {
 	}
 	jsonString := buf.String()
 	fmt.Printf("# ==== As JSON String\n       %v \n", jsonString)
-
+	
+	// =========== as json string to object proto
 	protoObject := new(model.GarageList)
 
 	err2 := jsonpb.UnmarshalString(jsonString, protoObject)
